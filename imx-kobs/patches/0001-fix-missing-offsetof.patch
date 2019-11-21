@@ -1,0 +1,15 @@
+Index: imx-kobs-1.0/src/plat_boot_config.h
+===================================================================
+--- imx-kobs-1.0.orig/src/plat_boot_config.h
++++ imx-kobs-1.0/src/plat_boot_config.h
+@@ -50,6 +50,10 @@
+ #define MX8MQ	0x81
+ #define MX8MN	0x82
+ 
++#ifndef offsetof
++#define offsetof(s,m) (size_t)&(((s *)0)->m)
++#endif
++
+ typedef struct _platform_config_t {
+ 	uint32_t m_u32RomVer;
+ 	uint32_t m_u32EnDISBBM;
