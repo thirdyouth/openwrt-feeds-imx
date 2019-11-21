@@ -1,0 +1,13 @@
+Index: imx-uuc-1.0/Makefile
+===================================================================
+--- imx-uuc-1.0.orig/Makefile
++++ imx-uuc-1.0/Makefile
+@@ -18,8 +18,6 @@ install:
+ 	install -d $(DESTDIR)$(BINDIR)
+ 	install -m 755 linuxrc $(DESTDIR)
+ 	install -m 755 $(PROGRAMS) $(DESTDIR)$(BINDIR)
+-	dd if=/dev/zero of=$(DESTDIR)/fat bs=1M count=1
+-	mkfs.vfat $(DESTDIR)/fat
+ 
+ clean:
+ 	rm -f $(PROGRAMS)
