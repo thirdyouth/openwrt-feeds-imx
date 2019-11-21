@@ -1,0 +1,12 @@
+menu "Configuration"
+	depends on PACKAGE_imx-uuc
+
+config UUC_LAUNCH_DEFAULT
+	bool "uuc Launch Default"
+	default y
+	select BUSYBOX_DEFAULT_UDHCPD 
+    select BUSYBOX_DEFAULT_FEATURE_MOUNT_NFS
+	help
+		This enables uuc linuxrc launch support.
+
+endmenu

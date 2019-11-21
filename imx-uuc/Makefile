@@ -28,6 +28,10 @@ define Package/imx-uuc
   URL:=https://source.codeaurora.org/external/imx/
 endef
 
+define Package/imx-uuc/config
+	source "$(SOURCE)/Config.in"
+endef
+
 define Build/Configure
 	true
 endef
